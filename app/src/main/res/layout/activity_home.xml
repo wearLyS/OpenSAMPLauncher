@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/background_fundo_main"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/textnickdescri"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:gravity="center"
+        android:text="Altere seu nick em configurações"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/server_view" />
+
+    <TextView
+        android:id="@+id/server_players"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Pressione o botão:"
+        android:textAlignment="center"
+        android:textColor="@color/colorNone"
+        android:textSize="16sp"
+        app:drawableTint="#CC2B2B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nickname" />
+
+    <TextView
+        android:id="@+id/server_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="314dp"
+        android:layout_height="168dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="Logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/brasil" />
+
+    <ImageView
+        android:id="@+id/linkSite"
+        android:layout_width="50dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:onClick="redirecionarSite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/linkDiscord"
+        app:layout_constraintTop_toBottomOf="@+id/play_btn"
+        app:layout_constraintVertical_bias="0.222"
+        app:srcCompat="@drawable/ic_internet_102151" />
+
+    <com.brasilnewstart.launcher.core.ServerView
+        android:id="@+id/server_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/server_name" />
+
+    <ImageView
+        android:id="@+id/linkDiscord"
+        android:layout_width="50dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:onClick="redirecionarDiscord"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linkSite"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/linkYoutube"
+        app:layout_constraintTop_toBottomOf="@+id/play_btn"
+        app:layout_constraintVertical_bias="0.222"
+        app:srcCompat="@drawable/ic_discord_icon_130958" />
+
+    <ImageView
+        android:id="@+id/linkYoutube"
+        android:layout_width="50dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:onClick="redirecionarYoutube"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linkDiscord"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/linkFacebook"
+        app:layout_constraintTop_toBottomOf="@+id/play_btn"
+        app:layout_constraintVertical_bias="0.222"
+        app:srcCompat="@drawable/ic_youtube_icon_icons_com_66802" />
+
+    <ImageView
+        android:id="@+id/linkFacebook"
+        android:layout_width="50dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="8dp"
+        android:onClick="redirecionarFacebook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linkYoutube"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/play_btn"
+        app:layout_constraintVertical_bias="0.268"
+        app:srcCompat="@drawable/ic__485482214_facebook_78681" />
+
+    <com.brasilnewstart.launcher.ui.widgets.playbutton.PlayButton
+        android:id="@+id/play_btn"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:backgroundTint="#4CAF50"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/server_players"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/nickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textnickdescri" />
+</androidx.constraintlayout.widget.ConstraintLayout>

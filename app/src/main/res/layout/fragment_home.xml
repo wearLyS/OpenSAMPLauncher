@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <com.umnicode.samp_launcher.ui.widgets.playbutton.PlayButton
+    <com.brasilnewstart.launcher.ui.widgets.playbutton.PlayButton
         android:id="@+id/play_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -135,14 +135,14 @@
         android:id="@+id/welcome_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/welcome"
+        android:text="oi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nickname"
         app:layout_constraintVertical_bias="0.0" />
 
-    <com.umnicode.samp_launcher.core.ServerView
+    <com.brasilnewstart.launcher.core.ServerView
         android:id="@+id/server_view"
         android:layout_width="0dp"
         android:layout_height="0dp"

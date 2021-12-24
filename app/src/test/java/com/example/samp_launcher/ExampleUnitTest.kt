@@ -1,4 +1,4 @@
-package com.umnicode.samp_launcher
+package com.brasilnewstart.launcher
 
 import org.junit.Test
 

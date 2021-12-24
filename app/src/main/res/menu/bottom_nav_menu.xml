@@ -7,8 +7,13 @@
         android:title="@string/title_home" />
 
     <item
+        android:id="@+id/navigation_servers"
+        android:icon="@drawable/ic_baseline_toc_24"
+        android:title="Servidores" />
+
+    <item
         android:id="@+id/navigation_settings"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/ic_baseline_settings_24"
         android:title="@string/title_settings" />
 
 </menu>
